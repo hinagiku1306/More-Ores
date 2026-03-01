@@ -16,6 +16,8 @@ public class ModEntry : Mod
         var harmony = new Harmony(ModManifest.UniqueID);
         CreateLitterObjectPatch.Apply(harmony, Monitor);
         AdjustLevelChancesPatch.Apply(harmony, Monitor);
+        VolcanoAdjustLevelChancesPatch.Apply(harmony, Monitor);
+        VolcanoChooseStoneTypePatch.Apply(harmony, Monitor);
 
         helper.Events.GameLoop.GameLaunched += OnGameLaunched;
     }
@@ -30,6 +32,12 @@ public class ModEntry : Mod
             mod: ModManifest,
             reset: () => Config = new ModConfig(),
             save: () => Helper.WriteConfig(Config)
+        );
+
+        // ── Mines & Skull Cavern ──
+        gmcm.AddSectionTitle(
+            mod: ModManifest,
+            text: () => Helper.Translation.Get("section.MinesAndSkullCavern")
         );
 
         AddMultiplierOption(gmcm, nameof(ModConfig.StoneChanceMultiplier),
@@ -54,6 +62,31 @@ public class ModEntry : Mod
             () => Config.DiamondNodeMultiplier, v => Config.DiamondNodeMultiplier = v);
         AddMultiplierOption(gmcm, nameof(ModConfig.GemStoneMultiplier),
             () => Config.GemStoneMultiplier, v => Config.GemStoneMultiplier = v);
+        AddMultiplierOption(gmcm, nameof(ModConfig.CoalNodeMultiplier),
+            () => Config.CoalNodeMultiplier, v => Config.CoalNodeMultiplier = v);
+        AddMultiplierOption(gmcm, nameof(ModConfig.MineForageableMultiplier),
+            () => Config.MineForageableMultiplier, v => Config.MineForageableMultiplier = v);
+
+        // ── Volcano Dungeon ──
+        gmcm.AddSectionTitle(
+            mod: ModManifest,
+            text: () => Helper.Translation.Get("section.VolcanoDungeon")
+        );
+
+        AddMultiplierOption(gmcm, nameof(ModConfig.VolcanoStoneDensityMultiplier),
+            () => Config.VolcanoStoneDensityMultiplier, v => Config.VolcanoStoneDensityMultiplier = v);
+        AddMultiplierOption(gmcm, nameof(ModConfig.VolcanoCinderShardMultiplier),
+            () => Config.VolcanoCinderShardMultiplier, v => Config.VolcanoCinderShardMultiplier = v);
+        AddMultiplierOption(gmcm, nameof(ModConfig.VolcanoGoldOreMultiplier),
+            () => Config.VolcanoGoldOreMultiplier, v => Config.VolcanoGoldOreMultiplier = v);
+        AddMultiplierOption(gmcm, nameof(ModConfig.VolcanoCoalNodeMultiplier),
+            () => Config.VolcanoCoalNodeMultiplier, v => Config.VolcanoCoalNodeMultiplier = v);
+        AddMultiplierOption(gmcm, nameof(ModConfig.VolcanoDiamondNodeMultiplier),
+            () => Config.VolcanoDiamondNodeMultiplier, v => Config.VolcanoDiamondNodeMultiplier = v);
+        AddMultiplierOption(gmcm, nameof(ModConfig.VolcanoGemStoneMultiplier),
+            () => Config.VolcanoGemStoneMultiplier, v => Config.VolcanoGemStoneMultiplier = v);
+        AddMultiplierOption(gmcm, nameof(ModConfig.VolcanoMagmaCapMultiplier),
+            () => Config.VolcanoMagmaCapMultiplier, v => Config.VolcanoMagmaCapMultiplier = v);
     }
 
     private void AddMultiplierOption(IGenericModConfigMenuApi gmcm, string fieldName,
@@ -74,6 +107,7 @@ public class ModEntry : Mod
 public interface IGenericModConfigMenuApi
 {
     void Register(IManifest mod, Action reset, Action save, bool titleScreenOnly = false);
+    void AddSectionTitle(IManifest mod, Func<string> text, Func<string>? tooltip = null);
     void AddNumberOption(IManifest mod, Func<int> getValue, Action<int> setValue,
         Func<string> name, Func<string>? tooltip = null,
         int? min = null, int? max = null, int? interval = null,

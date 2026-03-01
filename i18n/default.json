@@ -1,15 +1,18 @@
 {
+  "section.MinesAndSkullCavern": "Mines, Skull Cavern & Quarry Mine",
+  "section.VolcanoDungeon": "Volcano Dungeon",
+
   "config.StoneChanceMultiplier.name": "Stone Density",
-  "config.StoneChanceMultiplier.tooltip": "Multiplier for overall stone spawn density per floor.\nBase chance: 10-30% (Mines), 20-60% (Quarry), 10-30% (Skull Cavern)",
+  "config.StoneChanceMultiplier.tooltip": "Multiplier for overall stone spawn density per floor.\nBase chance: 10-30% (Mines), 20-60% (Quarry Mine), 10-30% (Skull Cavern)",
 
   "config.SkullCavernOreChanceMultiplier.name": "Skull Cavern Ore Chance",
   "config.SkullCavernOreChanceMultiplier.tooltip": "Multiplier for the chance that a stone in Skull Cavern becomes an ore node.\nBase chance: 2-16% (Skull Cavern floor 1-100)",
 
   "config.CopperOreMultiplier.name": "Copper Ore",
-  "config.CopperOreMultiplier.tooltip": "Multiplier for copper ore node spawn rate.\nBase chance: 2.9% (Mines floor 1-40), 1% (Quarry)",
+  "config.CopperOreMultiplier.tooltip": "Multiplier for copper ore node spawn rate.\nBase chance: 2.9% (Mines floor 1-40), 1% (Quarry Mine)",
 
   "config.IronOreMultiplier.name": "Iron Ore",
-  "config.IronOreMultiplier.tooltip": "Multiplier for iron ore node spawn rate.\nBase chance: 2.9% (Mines floor 41-80), 1% (Quarry), 50% (Skull Cavern)",
+  "config.IronOreMultiplier.tooltip": "Multiplier for iron ore node spawn rate.\nBase chance: 2.9% (Mines floor 41-80), 1% (Quarry Mine), 50% (Skull Cavern)",
 
   "config.GoldOreMultiplier.name": "Gold Ore",
   "config.GoldOreMultiplier.tooltip": "Multiplier for gold ore node spawn rate.\nBase chance: 2.9% (Mines floor 81-120), 7% (Skull Cavern)",
@@ -30,5 +33,32 @@
   "config.DiamondNodeMultiplier.tooltip": "Multiplier for diamond node spawn rate. Chance increases with depth and luck.\nBase chance: 0.07-0.13% (Mines floor 51-120), 0.13-0.2% (Skull Cavern floor 1-100)",
 
   "config.GemStoneMultiplier.name": "Regular Gem Stone",
-  "config.GemStoneMultiplier.tooltip": "Multiplier for gem stones spawn rate. Chance increases with depth.\nBase chance: 0.2-0.7% (Mines floor 11-120), 0.7-1.1% (Skull Cavern floor 1-100)"
+  "config.GemStoneMultiplier.tooltip": "Multiplier for gem stone spawn rate. Chance increases with depth.\nBase chance: 0.2-0.7% (Mines floor 11-120), 0.7-1.1% (Skull Cavern floor 1-100)",
+
+  "config.CoalNodeMultiplier.name": "Coal Node",
+  "config.CoalNodeMultiplier.tooltip": "Multiplier for coal node spawn rate. Chance scales with daily luck.\nBase chance: 9% (Quarry Mine)",
+
+  "config.MineForageableMultiplier.name": "Forageable",
+  "config.MineForageableMultiplier.tooltip": "Multiplier for forageable item spawn rate.\nBase chance: 0.25% (Mines, Skull Cavern), 0.01% (Quarry Mine), 0% (Elevator floors)",
+
+  "config.VolcanoStoneDensityMultiplier.name": "Stone Density",
+  "config.VolcanoStoneDensityMultiplier.tooltip": "Multiplier for overall stone spawn density.\nBase chance: 7-11%",
+
+  "config.VolcanoCinderShardMultiplier.name": "Cinder Shard",
+  "config.VolcanoCinderShardMultiplier.tooltip": "Multiplier for cinder shard node spawn rate. Chance scales with floor and luck.\nBase chance: 0.7-1.5% (floor 1-9)",
+
+  "config.VolcanoGoldOreMultiplier.name": "Gold Ore",
+  "config.VolcanoGoldOreMultiplier.tooltip": "Multiplier for gold ore node spawn rate. Chance scales with floor.\nBase chance: 0.9-1.8% (floor 1-9)",
+
+  "config.VolcanoCoalNodeMultiplier.name": "Coal Node",
+  "config.VolcanoCoalNodeMultiplier.tooltip": "Multiplier for coal node spawn rate. Chance scales with floor.\nBase chance: 1.1-2.2% (floor 1-9)",
+
+  "config.VolcanoDiamondNodeMultiplier.name": "Diamond Node",
+  "config.VolcanoDiamondNodeMultiplier.tooltip": "Multiplier for diamond node spawn rate.\nBase chance: 0.05%",
+
+  "config.VolcanoGemStoneMultiplier.name": "Regular Gem Stone",
+  "config.VolcanoGemStoneMultiplier.tooltip": "Multiplier for gem stone spawn rate.\nBase chance: 0.07% (Emerald), 0.02% (Aquamarine, floor 3+)",
+
+  "config.VolcanoMagmaCapMultiplier.name": "Magma Cap",
+  "config.VolcanoMagmaCapMultiplier.tooltip": "Multiplier for magma cap spawn rate.\nBase chance: 0.1% (regular floors), 3.5% (Mushroom floors)"
 }

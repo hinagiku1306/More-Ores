@@ -261,7 +261,8 @@ internal static class CreateLitterObjectPatch
                 if (tile.X > 50f)
                 {
                     whichStone = Game1.random.Choose(668, 670);
-                    if (mineRandom.NextDouble() < 0.09 + Game1.player.team.AverageDailyLuck(mine) / 2.0)
+                    if (mineRandom.NextDouble() < (0.09 + Game1.player.team.AverageDailyLuck(mine) / 2.0)
+                        * config.CoalNodeMultiplier)
                     {
                         return new Object(Game1.random.Choose("BasicCoalNode0", "BasicCoalNode1"), 1)
                         {

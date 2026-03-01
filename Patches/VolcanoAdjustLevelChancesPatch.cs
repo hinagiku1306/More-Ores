@@ -5,9 +5,9 @@ using StardewValley.Locations;
 namespace MoreOres.Patches;
 
 /// <summary>
-/// Harmony postfix on MineShaft.adjustLevelChances to scale stoneChance and itemChance by config multipliers.
+/// Harmony postfix on VolcanoDungeon.adjustLevelChances to scale stoneChance and itemChance.
 /// </summary>
-internal static class AdjustLevelChancesPatch
+internal static class VolcanoAdjustLevelChancesPatch
 {
     private static IMonitor Monitor = null!;
 
@@ -16,10 +16,10 @@ internal static class AdjustLevelChancesPatch
         Monitor = monitor;
 
         harmony.Patch(
-            original: AccessTools.Method(typeof(MineShaft), "adjustLevelChances",
+            original: AccessTools.Method(typeof(VolcanoDungeon), "adjustLevelChances",
                 new[] { typeof(double).MakeByRefType(), typeof(double).MakeByRefType(),
                         typeof(double).MakeByRefType(), typeof(double).MakeByRefType() }),
-            postfix: new HarmonyMethod(typeof(AdjustLevelChancesPatch), nameof(Postfix))
+            postfix: new HarmonyMethod(typeof(VolcanoAdjustLevelChancesPatch), nameof(Postfix))
         );
     }
 
@@ -27,12 +27,12 @@ internal static class AdjustLevelChancesPatch
     {
         try
         {
-            stoneChance *= ModEntry.Config.StoneChanceMultiplier;
-            itemChance *= ModEntry.Config.MineForageableMultiplier;
+            stoneChance *= ModEntry.Config.VolcanoStoneDensityMultiplier;
+            itemChance *= ModEntry.Config.VolcanoMagmaCapMultiplier;
         }
         catch (Exception ex)
         {
-            Monitor.Log($"AdjustLevelChances postfix failed: {ex}", LogLevel.Error);
+            Monitor.Log($"VolcanoAdjustLevelChances postfix failed: {ex}", LogLevel.Error);
         }
     }
 }
