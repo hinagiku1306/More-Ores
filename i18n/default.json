@@ -1,0 +1,34 @@
+{
+  "config.StoneChanceMultiplier.name": "Stone Density",
+  "config.StoneChanceMultiplier.tooltip": "Multiplier for overall stone spawn density per floor.\nBase chance: 10-30% (Mines), 20-60% (Quarry), 10-30% (Skull Cavern)",
+
+  "config.SkullCavernOreChanceMultiplier.name": "Skull Cavern Ore Chance",
+  "config.SkullCavernOreChanceMultiplier.tooltip": "Multiplier for the chance that a stone in Skull Cavern becomes an ore node.\nBase chance: 2-16% (Skull Cavern floor 1-100)",
+
+  "config.CopperOreMultiplier.name": "Copper Ore",
+  "config.CopperOreMultiplier.tooltip": "Multiplier for copper ore node spawn rate.\nBase chance: 2.9% (Mines floor 1-40), 1% (Quarry)",
+
+  "config.IronOreMultiplier.name": "Iron Ore",
+  "config.IronOreMultiplier.tooltip": "Multiplier for iron ore node spawn rate.\nBase chance: 2.9% (Mines floor 41-80), 1% (Quarry), 50% (Skull Cavern)",
+
+  "config.GoldOreMultiplier.name": "Gold Ore",
+  "config.GoldOreMultiplier.tooltip": "Multiplier for gold ore node spawn rate.\nBase chance: 2.9% (Mines floor 81-120), 7% (Skull Cavern)",
+
+  "config.IridiumOreMultiplier.name": "Iridium Ore",
+  "config.IridiumOreMultiplier.tooltip": "Multiplier for iridium ore node spawn rate.\nBase chance: 0.03-43% (Skull Cavern floor 1-100)",
+
+  "config.RadioactiveOreMultiplier.name": "Radioactive Ore",
+  "config.RadioactiveOreMultiplier.tooltip": "Multiplier for radioactive ore node spawn rate.\nBase chance: 0.1-0.2% (Danger Mines), 0.2-0.3% (Danger Skull Cavern floor 1-100)",
+
+  "config.MysticStoneMultiplier.name": "Mystic Stone",
+  "config.MysticStoneMultiplier.tooltip": "Multiplier for mystic stone spawn rate. Chance scales with mining skill and luck.\nBase chance: 0.005-0.006% (Mines floor 100+, Skull Cavern)",
+
+  "config.GemNodeMultiplier.name": "Purple Gem Stone",
+  "config.GemNodeMultiplier.tooltip": "Multiplier for purple gem stone spawn rate. Chance scales with mining skill and luck.\nBase chance: 0.05-0.07% (Mines, Skull Cavern)",
+
+  "config.DiamondNodeMultiplier.name": "Diamond Node",
+  "config.DiamondNodeMultiplier.tooltip": "Multiplier for diamond node spawn rate. Chance increases with depth and luck.\nBase chance: 0.07-0.13% (Mines floor 51-120), 0.13-0.2% (Skull Cavern floor 1-100)",
+
+  "config.GemStoneMultiplier.name": "Regular Gem Stone",
+  "config.GemStoneMultiplier.tooltip": "Multiplier for gem stones spawn rate. Chance increases with depth.\nBase chance: 0.2-0.7% (Mines floor 11-120), 0.7-1.1% (Skull Cavern floor 1-100)"
+}

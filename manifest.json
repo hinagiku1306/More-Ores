@@ -1,0 +1,16 @@
+{
+    "Name": "More Ores",
+    "Author": "hinagiku1306",
+    "Version": "1.0",
+    "Description": "Configurable multipliers for ore node spawn rates in the Mines and Skull Cavern.",
+    "UniqueID": "hinagiku1306.MoreOres",
+    "EntryDll": "MoreOres.dll",
+    "MinimumApiVersion": "4.0.0",
+    "UpdateKeys": ["Nexus:43018"],
+    "Dependencies": [
+        {
+            "UniqueID": "spacechase0.GenericModConfigMenu",
+            "IsRequired": false
+        }
+    ]
+}
